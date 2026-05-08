@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TodoService } from '../../services/todo.service';
@@ -8,7 +8,7 @@ import { Todo } from '../../models/todo.model';
 @Component({
   selector: 'app-todo-form',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterLink],
+  imports: [FormsModule, CommonModule, RouterModule],
   template: `
     <div class="container">
       <div class="card" style="max-width: 500px; margin: 0 auto;">

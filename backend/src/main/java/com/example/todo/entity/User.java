@@ -1,5 +1,6 @@
 package com.example.todo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -24,8 +25,12 @@ public class User {
     
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
-    
+
+    @Column(nullable = false)
+    private String role = "ROLE_USER";
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<Todo> todos = new ArrayList<>();
     
     @PrePersist
@@ -80,7 +85,15 @@ public class User {
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
-    
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public List<Todo> getTodos() {
         return todos;
     }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TodoService } from '../../services/todo.service';
 import { Todo } from '../../models/todo.model';
@@ -7,7 +7,7 @@ import { Todo } from '../../models/todo.model';
 @Component({
   selector: 'app-todo-list',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterModule],
   template: `
     <div class="container">
       <div class="card">
