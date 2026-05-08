@@ -31,8 +31,13 @@ A full-stack Todo application built with **Spring Boot** (backend) and **Angular
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/windsurf-project.git
-cd windsurf-project
+# Clone to a custom directory name (recommended)
+git clone https://github.com/YOUR_USERNAME/cascade-todo.git todo-app
+cd todo-app
+
+# Or clone with default repository name
+git clone https://github.com/YOUR_USERNAME/cascade-todo.git
+cd cascade-todo
 ```
 
 ### 2. Start the Backend
